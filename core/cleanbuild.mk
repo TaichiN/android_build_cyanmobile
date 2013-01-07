@@ -195,11 +195,6 @@ dataclean_files := \
 	$(PRODUCT_OUT)/data-qemu/* \
 	$(PRODUCT_OUT)/userdata-qemu.img
 
-# make sure *_OUT is set so that we won't result in deleting random parts
-# of the filesystem.
-ifneq (2,$(words $(HOST_OUT) $(PRODUCT_OUT)))
-  $(error both HOST_OUT and PRODUCT_OUT should be set at this point.)
-endif
 
 # Define the rules for commandline invocation.
 .PHONY: dataclean
