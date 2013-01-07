@@ -102,21 +102,6 @@ $(error Directory names containing spaces not supported)
 endif
 
 
-# Check for the correct version of java
-java_version := $(shell java -version 2>&1 | head -n 1 | grep '[ "]1\.6[\. "$$]')
-ifeq ($(strip $(java_version)),)
-$(warning ************************************************************)
-$(warning You are attempting to build with the incorrect version)
-$(warning of java.)
-$(warning $(space))
-$(warning Your version is: $(shell java -version 2>&1 | head -n 1).)
-$(warning The correct version is: 1.6.)
-$(warning $(space))
-$(warning Please follow the machine setup instructions at)
-$(warning $(space)$(space)$(space)$(space)http://source.android.com/download)
-$(warning ************************************************************)
-endif
-
 # Check for the correct version of javac
 javac_version := $(shell javac -version 2>&1 | head -n 1 | grep '[ "]1\.6[\. "$$]')
 ifeq ($(strip $(javac_version)),)
