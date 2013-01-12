@@ -245,4 +245,4 @@ else:
             print "Done"
             sys.exit()
 
-print "Repository for %s not found in the CyanMobile Github repository list. If this is in error, you may need to manually add it to your local_manifest.xml." % device
+print "Repository for %s not found in the CyanMobile Github repository list. If this is in error, you may need to manually add it to your localmanifest/local_manifest.xml." % device
